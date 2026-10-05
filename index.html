@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você decide o futuro da IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="caixa-principal">
+
+        <h1>Você decide o futuro da IA</h1>
+
+        <div class="tela-inicial">
+            <p>
+                Novembro de 2022. A humanidade percebeu que as máquinas
+                estavam evoluindo rapidamente.
+
+                <br><br>
+
+                Agora estamos em 2049 e a inteligência artificial está
+                presente em praticamente todos os aspectos da sociedade.
+
+                <br><br>
+
+                Suas escolhas irão construir uma história sobre o futuro
+                da tecnologia.
+            </p>
+
+            <button class="iniciar-btn">Iniciar</button>
+        </div>
+
+        <div class="caixa-perguntas"></div>
+        <div class="caixa-alternativas"></div>
+
+        <div class="caixa-resultado">
+            <p class="texto-resultado"></p>
+            <button class="novamente-btn">Jogar novamente</button>
+        </div>
+
+    </main>
+
+    <script type="module" src="js/aleatorio.js"></script>
+    <script type="module" src="js/perguntas.js"></script>
+    <script type="module" src="js/script.js"></script>
+
+</body>
+
+</html>
+style.css
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Inter:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #080b1a, #101936);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.caixa-principal {
+    width: 100%;
+    max-width: 850px;
+    background: #111936;
+    border: 1px solid #26366b;
+    border-radius: 20px;
+    padding: 45px;
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tela-inicial p,
+.texto-resultado {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+button {
+    background: #5c7cfa;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #748ffc;
+}
+
+.iniciar-btn {
+    display: block;
+    margin: auto;
+}
+
+.caixa-perguntas {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.caixa-alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.caixa-alternativas button {
+    text-align: left;
+    width: 100%;
+    background: #17234a;
+    border: 1px solid #304486;
+}
+
+.caixa-resultado {
+    display: none;
+}
+
+.caixa-resultado.mostrar {
+    display: block;
+}
+
+.novamente-btn {
+    display: block;
+    margin-left: auto;
+}
+
+@media (max-width: 600px) {
+    .caixa-principal {
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .caixa-perguntas {
+        font-size: 20px;
+    }
+} 
